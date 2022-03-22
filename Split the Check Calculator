@@ -1,0 +1,17 @@
+"""This Python program calculates how much each person needs to pay using the
+user input of the total cost of the meal, how many people there are, and what
+percent they want to tip."""
+
+#this function calculates the cost for each person including tip
+def split_check(price, num_people, tip):
+    total_cost = price + (price * (tip / 100))
+    cost_per_person = round((total_cost / num_people), 2)
+    print("The cost per person with a " + str(tip) + " percent tip is $" + str(cost_per_person) + ".")
+    
+#asks user for total cost, number of people, and how much they want to tip
+price = float(input("How much is the meal in total? "))
+num_people = int(input("How many people are there? "))
+tip = int(input("What percent would you like to tip? "))
+
+split_check(price, num_people, tip)
+
